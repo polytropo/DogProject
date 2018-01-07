@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h1 class="display-1 titleHeader">DOGS</h1>
+		<p class="display-4 textHeader">Which is your favorite?</p>
+		
+	</header>
+	<!-- 	LOGIN MODAL trigger -->
+	<button class="btn btn-info" data-toggle="modal" data-target="#addDogModal">Add Dog Here</button>
+	<!-- ADD Dog Modal -->
+	<div class="modal" id="addDogModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add your Dog</h5>
+            <button class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="name">Dog Name</label>
+                <input type="text" placeholder="Dog name" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="breed">Dog Breed</label>
+                <input type="text" placeholder="Dog breed" class="form-control">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button class="btn btn-primary" data-dismiss="modal" id='addDog'>Add dog</button>
+          	
+          </div>
+        </div>
+      </div>
+    </div>
+	<div class="container">
+
+		<h1>Add Dog</h1>
+		<form id="dog-form">
+			<div>
+				<label for="name">Dog Name</label>
+				<input type="text" id="name" class="u-full-width">
+			</div>
+			<div>
+				<label for="breed">Dog Breed</label>
+				<input type="text" id="breed" class="u-full-width">
+			</div>
+			<div>
+				<label for="hobby">Dog Hobby</label>
+				<input type="text" id="hobby" class="u-full-width">
+			</div>
+			<div>
+				<input type="submit" value="submit" class="btn btn-primary">
+			</div>
+		</form>
+		<hr>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Dog Name</th>
+					<th>Breed</th>
+					<th>Number of Likes</th>
+				</tr>
+			</thead>
+			<tbody id="dog-list">
+				
+			</tbody>
+		</table>
+	</div>
+
+	<div id="content">
+		
+	</div>
+	
+	<div id='main'>
+		
+	</div>
+	
+	<footer>
+		<p class="fixed-bottom d-inline">2018 &copy Primoz Babsek</p>
+	</footer>
+	
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="script123.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
+
+
+<!-- functionality important - create a card through submit form, on submit create an object through class object constructor
+ -->
