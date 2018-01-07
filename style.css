@@ -77,3 +77,11 @@ footer {
 .error {
 	background: red;
 }
+
+.card-body {
+	padding: 3%;
+}
+
+#toggleButton {
+	margin-left: 5%;
+}

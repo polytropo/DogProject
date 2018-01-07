@@ -15,9 +15,9 @@
 		
 	</header>
 	<!-- 	LOGIN MODAL trigger -->
-	<button class="btn btn-info" data-toggle="modal" data-target="#addDogModal">Add Dog Here</button>
+<!-- 	<button class="btn btn-info" data-toggle="modal" data-target="#addDogModal">Add Dog Here</button> -->
 	<!-- ADD Dog Modal -->
-	<div class="modal" id="addDogModal">
+<!-- 	<div class="modal" id="addDogModal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -43,40 +43,49 @@
           </div>
         </div>
       </div>
-    </div>
-	<div class="container">
+    </div> -->
+    <table class="table">
+		<thead>
+			<tr>
+				<th>Dog Name</th>
+				<th>Breed</th>
+				<th>Number of Likes</th>
+			</tr>
+		</thead>
+		<tbody id="dog-list">
+			
+		</tbody>
+	</table>
+	<button id="toggleButton" class="btn btn-primary d-block mb-4" data-toggle="collapse" data-target="#collapse-btn-1">ADD DOG</button>
+		
+	<div class="container collapse mb-5" id="collapse-btn-1">
+		<div class="card">
+			<div class="card-body">
 
-		<h1>Add Dog</h1>
-		<form id="dog-form">
-			<div>
-				<label for="name">Dog Name</label>
-				<input type="text" id="name" class="u-full-width">
-			</div>
-			<div>
-				<label for="breed">Dog Breed</label>
-				<input type="text" id="breed" class="u-full-width">
-			</div>
-			<div>
-				<label for="hobby">Dog Hobby</label>
-				<input type="text" id="hobby" class="u-full-width">
-			</div>
-			<div>
-				<input type="submit" value="submit" class="btn btn-primary">
-			</div>
-		</form>
-		<hr>
-		<table class="table">
-			<thead>
-				<tr>
-					<th>Dog Name</th>
-					<th>Breed</th>
-					<th>Number of Likes</th>
-				</tr>
-			</thead>
-			<tbody id="dog-list">
+				<h1>Add Dog</h1>
+				<form id="dog-form">
+					<div class = "form-group">
+						<label for="name">Dog Name</label>
+						<input type="text" id="name" class="form-control form-control-sm" placeholder="Dog's name">
+					</div>
+					
+					<div class = "form-group">
+						<label for="breed">Dog Breed</label>
+						<input type="text" id="breed" class="form-control form-control-sm" placeholder="Dog's breed">
+					</div>
+					
+					<div class = "form-group">
+						<label for="hobby">Dog Hobby</label>
+						<input type="text" id="hobby" class="form-control form-control-sm" placeholder="Dog hobbies">
+					</div>
+					
+					<div class = "form-group">
+						<input type="submit" value="Submit" class="btn btn-primary btn-lg">
+					</div>
+				</form>
 				
-			</tbody>
-		</table>
+			</div>
+		</div>
 	</div>
 
 	<div id="content">
