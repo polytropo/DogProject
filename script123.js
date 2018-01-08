@@ -27,14 +27,16 @@ class Dog {
 	
 		main.appendChild(cardDog);
 		cardDog.className = 'myCards margin';
-
 	}
+}
 
-	// addCounter(target) {
-	// 	if(target.className === 'i') {
-	// 	console.log([i]);
-	// 	}
-	// }
+// function to add dogs from array into table
+function dogInTable() {
+	const dogList = document.getElementById("dog-list");
+	dogList.innerHTML = "";
+	for(var i = 0; i < dogs.length; i++) {
+	dogList.innerHTML += `<tr><td>${dogs[i].name}</td><td>${dogs[i].breed}</td><td class="number${i}">0</td></tr>`;
+	}
 }
 
 var myNumber = 0;
@@ -47,18 +49,22 @@ var dogs = [new Dog('Rusty', 'golden retriever', 'catch the ball', 'img/dog1.jpg
 //create card for every dog
 for(var i = 0; i < dogs.length; i++) {
 	myNumber =+ i;
-	dogs[i].createCard(dogs[i]);
-	
-	// console.log(dogs[i].name);
+	dogs[i].createCard();
+	console.log(dogs[i].name);
 }
 
+// Add predefined dogs into table
+dogInTable();
 
+
+// Set Counter of like to 0 for every dog in dogs array
 var counter = [];
 counter.length = dogs.length
 	for (i = 0; i < counter.length; i++){
 		counter[i] = 0;
 	}
 
+// Function to update likes on click
 function likes() {
 	document.getElementById('main').addEventListener('click', function(e){
 
@@ -68,7 +74,9 @@ function likes() {
 				counter[i] += 1; 
 				// console.log(counter);
 				document.getElementById(`likes_${dogs[i].idNumber}`).innerHTML = counter[i];
-		}
+				// Set number of like in the table
+				document.querySelector(`.number${dogs[i].idNumber}`).innerHTML = counter[i];
+			}
 
 		// console.log(e.target);
 
@@ -76,7 +84,7 @@ function likes() {
 		}
 	})
 }
-
+// likes on click
 likes();
 
 // Event Listener for adding a dog
@@ -103,18 +111,26 @@ document.getElementById('dog-form').addEventListener('submit', function(e){
 		counter.push(0);
 		myNumber += 1;
 		dogs.push(newDog);
-		// console.log(dogs);
-		// console.log(counter);
-		//Create card of newly added dog
 
+		//Create card of newly added dog
 		newDog.createCard();
-		// console.log(counter);
+	
 		// Push 1 more counter into counter array
 		alert(`${name} was added successfully!`);
+		
 		// Clear data from input fields
 		document.getElementById('name').value = '';
 		document.getElementById('breed').value = '';
 		document.getElementById('hobby').value = '';
+		
+		// Add added dog also in table
+		dogInTable();
+		
+		// Keep number of like on all dogs already in table after adding a dog
+		for (var i = 0; i < dogs.length; i++) {
+		document.querySelector(`.number${dogs[i].idNumber}`).innerHTML = counter[i];
+		}
+		
 	}
 
 	e.preventDefault();
