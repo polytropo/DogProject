@@ -35,7 +35,7 @@ function dogInTable() {
 	const dogList = document.getElementById("dog-list");
 	dogList.innerHTML = "";
 	for(var i = 0; i < dogs.length; i++) {
-	dogList.innerHTML += `<tr><td>${dogs[i].name}</td><td>${dogs[i].breed}</td><td class="number${i}">0</td></tr>`;
+		dogList.innerHTML += `<tr><td>${dogs[i].name}</td><td>${dogs[i].breed}</td><td class="number${i}">0</td><td><a href="#">X</a></td></tr>`;
 	}
 }
 
